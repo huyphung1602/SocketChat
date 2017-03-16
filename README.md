@@ -59,7 +59,7 @@ Please show your TAs/Teacher your work.
 
 ### Milestone 4: broadcast new messages to all clients in `MessagesController#create`
 
-- [ ] In `MessagesController#create`, after a message is saved, broadcast `{message: @message.body}` to the `chat` stream.
+- [x] In `MessagesController#create`, after a message is saved, broadcast `{message: @message.body}` to the `chat` stream.
 
 Verify:
 
@@ -69,7 +69,7 @@ Verify:
 - Browser B receives updates via Web Socket and also displays the latest messages.
 - If A sends more messages, B continues to render them but they look ugly.
 
-- [ ] Let's make the message pretty. Create a `render_message(message)` private method in `MessagesController`. Then broadcast `message: render_message(@message)` instead.
+- [x] Let's make the message pretty. Create a `render_message(message)` private method in `MessagesController`. Then broadcast `message: render_message(@message)` instead.
 
   ```ruby
   def render_message(message)

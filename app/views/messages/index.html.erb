@@ -1,22 +1,11 @@
 <h1>My Chat Room</h1>
 
-<%= form_for Message.new do |f| %>
-  <div class="ui form">
-    <div class="field">
-      <%= f.text_area :body, placeholder: "Type your message", rows: "3" %>
-    </div>
-
-    <%= f.submit "Send", class: "ui green button" %>
-  </div>
-<% end %>
-<br><br>
-
 <form class="ui form" id="js-socket">
   <div class="field">
     <textarea rows="3" placeholder="WebSocket"></textarea>
   </div>
 
-  <button class="ui blue button" type="submit">Send</button>
+  <button class="ui green button" type="submit">Send</button>
 </form>
 <br><br>
 

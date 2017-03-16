@@ -1,4 +1,4 @@
-uby Lab 5: Understanding the Journey from HTTP to WebSocket - CoderSchool
+Ruby Lab 5: Understanding the Journey from HTTP to WebSocket - CoderSchool
 
 ## Required features
 

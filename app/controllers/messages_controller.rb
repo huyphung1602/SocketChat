@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
     @messages = Message.order(created_at: 'DESC')
   end
 
-  def create
+  def create(data)
     @message = Message.new message_params
 
     if @message.save

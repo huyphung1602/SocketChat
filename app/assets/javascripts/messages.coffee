@@ -1,3 +1,14 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$(document).on "turbolinks:load", ->
+  $("#js-socket").submit (event) ->
+    console.log("stopping submitting via HTTP")
+    event.preventDefault()
+
+    # use jQuery to find the text input:
+    $input = $(this).find("textarea")
+
+    user_input = {body: $input.val()}
+    console.log("sending over socket: ", user_input)
+    App.messages.create(user_input)
+
+    # clear text field
+    $input.val('')

@@ -147,8 +147,8 @@ Verify:
 
 ### Milestone 6: refactor channel code
 
-- [ ] Server: in MessagesController, implement a `def create(data)` method that create a message from `data['message']` and broadcast the message rendering to the `chat` stream.
-- [ ] Client: in `app/assets/javascripts/channels/messages.coffee`, implement a `create: (body)` method:
+- [x] Server: in MessagesController, implement a `def create(data)` method that create a message from `data['message']` and broadcast the message rendering to the `chat` stream.
+- [x] Client: in `app/assets/javascripts/channels/messages.coffee`, implement a `create: (body)` method:
 
   ```coffee
   App.messages = App.cable.subscriptions.create "MessagesChannel",
@@ -158,11 +158,11 @@ Verify:
       @perform("create", message: data)
   ```
 
-- [ ] Browser Console: try typing `App.messages.create({body: "this is a message"})`. Verify that this goes to MessagesChannel#create and that you see the new message in the browser.
+- [x] Browser Console: try typing `App.messages.create({body: "this is a message"})`. Verify that this goes to MessagesChannel#create and that you see the new message in the browser.
 
 ![](http://g.recordit.co/tU0C8eSklm.gif)
 
-- [ ] Update `app/assets/javascripts/messages.coffee` with clearer code:
+- [x] Update `app/assets/javascripts/messages.coffee` with clearer code:
 
 
   ```coffee

@@ -1,5 +1,16 @@
 <h1>My Chat Room</h1>
 
+<%= form_for Message.new do |f| %>
+  <div class="ui form">
+    <div class="field">
+      <%= f.text_area :body, placeholder: "Type your message" %>
+    </div>
+
+    <%= f.submit "Send", class: "ui green button" %>
+  </div>
+<% end %>
+<br><br>
+
 <div class="messages">
   <%= render @messages %>
 </div>

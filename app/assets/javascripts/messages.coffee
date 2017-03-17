@@ -12,3 +12,10 @@ $(document).on "turbolinks:load", ->
 
     # clear text field
     $input.val('')
+
+  $(".message").click("#delete_link", (event) ->
+    console.log("deleting ", this)
+    messageId = $(this).data('message-id')
+    App.messages.delete(messageId)
+    event.preventDefault()
+  )

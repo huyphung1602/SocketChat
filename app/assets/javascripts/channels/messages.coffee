@@ -9,7 +9,14 @@ App.messages = App.cable.subscriptions.create "MessagesChannel",
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
     console.log("client receives ", data)
-    $(".messages").prepend(data.message)
+    
+    if (data.action == 'delete')
+      $("#message_" + data.messageId).remove()
+    else
+      $(".messages").prepend(data.message)
 
   create: (user_input) ->
     @perform("create", message: user_input)
+
+  delete: (messageId) ->
+    @perform("delete", messageId: messageId)

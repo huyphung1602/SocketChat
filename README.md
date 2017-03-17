@@ -187,9 +187,9 @@ Verify:
 
 ### Bonus Milestone 7: implement deleting a message
 
-- [ ] Inside 'message' partial, add a link to delete a message
-- [ ] Create a `delete: (messageId) ->` method inside `App.messages = App.cable.subscriptions.create "MessagesChannel"` which calls `this.perform("delete", id: messageId)`
-- [ ] Create a `def delete(data)` in `MessagesChannel` which handles removing the affected message and broadcast information to update the clients.
+- [x] Inside 'message' partial, add a link to delete a message
+- [x] Create a `delete: (messageId) ->` method inside `App.messages = App.cable.subscriptions.create "MessagesChannel"` which calls `this.perform("delete", id: messageId)`
+- [x] Create a `def delete(data)` in `MessagesChannel` which handles removing the affected message and broadcast information to update the clients.
 
 ### Bonus Milestone 8: implement multiple chat rooms.
 
